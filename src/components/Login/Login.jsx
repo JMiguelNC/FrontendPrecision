@@ -22,9 +22,17 @@ export default function Login() {
     try {
       const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/usuarios/login`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ usuario: username, contrasena: password })
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          usuario: username,
+          contrasena: password,
+        }),
+        credentials: "include", // 👈 Importante para CORS
+        mode: "cors",            // 👈 Obligatorio cuando hay distintos dominios
       });
+
 
       const data = await response.json();
 
