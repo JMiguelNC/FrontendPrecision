@@ -1,0 +1,107 @@
+.contenedorBotones {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  background-color: rgba(97, 97, 97, 0.521);
+  padding: 7px;
+  border-radius: 6px;
+  z-index: 10;
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+.contenedorBotones button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.contenedorBotones button:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.contenedorBotones button.zoomActivo {
+  color: #7cbcff;
+  background-color: rgba(0, 19, 190, 0.5);
+}
+
+.contenedorBotones button.moverActivo {
+  color: #ff8800;
+  background-color: rgba(145, 77, 0, 0.5);
+}
+
+.contenedorBotones button.fijarActivo {
+  color: #e6c300;
+  background-color: rgba(155, 132, 0, 0.5);
+}
+
+.contenedorBotones button.anadirActivo {
+  color: #00ff3c;
+  background-color: rgba(0, 88, 12, 0.5);
+}
+
+.contenedorBotones button.eliminarActivo {
+  color: #da4554;
+  background-color: rgba(110, 3, 3, 0.5);
+}
+
+.contenedorBotones button.redimensionarActivo {
+  color: #c78fdb;
+  background-color: rgba(139, 79, 159, 0.5);
+}
+
+.contenedorBotones button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+@media (max-width: 1200px) {
+  .contenedorBotones {
+    gap: 12px;
+    max-height: 85%;
+  }
+  .contenedorBotones button {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 900px) {
+  .contenedorBotones {
+    position: relative;
+    top: auto;
+    right: auto;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    max-height: none;
+    overflow: visible;
+    background-color: rgba(97, 97, 97, 0.5);
+  }
+  .contenedorBotones button {
+    font-size: 20px;
+    padding: 4px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contenedorBotones {
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+    background-color: rgba(153, 153, 153, 0.5);
+  }
+  .contenedorBotones button {
+    font-size: 18px;
+    padding: 6px;
+  }
+}

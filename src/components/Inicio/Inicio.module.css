@@ -1,0 +1,176 @@
+.inicioContainer {
+  padding: 0.1rem 2rem 2rem 2rem;
+}
+
+.bienvenida {
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+  color: #003366;
+}
+
+.filtrosContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.selectFiltro {
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: 1rem;
+  color: #003366;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.selectFiltro:hover {
+  border-color: #003366;
+  box-shadow: 0 3px 10px rgba(0, 51, 102, 0.2);
+}
+
+.selectFiltro:focus {
+  outline: none;
+  border-color: #003366;
+  box-shadow: 0 0 6px rgba(0, 51, 102, 0.4);
+}
+
+.tarjetasContainer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.tarjeta {
+  position: relative;
+  width: 350px;
+  padding: 3rem 1rem 1rem 1rem;
+  border-radius: 1.5rem;
+  color: white;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+}
+
+.iconoContainer {
+  position: absolute;
+  top: -130px;
+  left: -20px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  opacity: 0.25;
+}
+
+.icono {
+  font-size: 350px;
+  color: #000;
+}
+
+.contenido {
+  position: relative;
+  z-index: 1;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.texto {
+  font-size: 1.5rem;
+  text-align: left;
+  flex: 1;
+}
+
+.numero {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: right;
+}
+
+.realizadas {
+  background: linear-gradient(135deg, #005eff, #00318d);
+}
+
+.aceptados {
+  background: linear-gradient(135deg, #54be59, #008b09);
+}
+
+.rechazados {
+  background: linear-gradient(135deg, #fa0000, #800000);
+}
+
+.graficosContainer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .graficosContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.grafico {
+  background-color: #f9f9f9;
+  border-radius: 1rem;
+  padding: 0.5rem 2rem 0.5rem 0.1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.grafico:hover {
+  transform: translateY(-4px);
+}
+
+.grafico h3 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #003366;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  z-index: 10;
+}
+
+.spinner {
+  width: 70px;
+  height: 70px;
+  border: 8px solid rgba(0, 51, 102, 0.2);
+  border-top-color: #003366;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

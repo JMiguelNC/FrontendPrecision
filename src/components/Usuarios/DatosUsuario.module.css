@@ -1,0 +1,81 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: #f4f8ff;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.tituloModal {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #1e293b;
+}
+
+.datosGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 20px;
+}
+
+.datosGrid p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #334155;
+}
+
+.foto {
+  grid-column: span 2;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.foto img {
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.btnCerrar {
+  display: block;
+  margin: 20px auto 0 auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.btnCerrar:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 480px) {
+  .datosGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .foto img {
+    max-width: 100%;
+    height: auto;
+  }
+}

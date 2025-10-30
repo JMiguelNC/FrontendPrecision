@@ -1,0 +1,113 @@
+.resultadosContainer {
+  padding: 0.5rem;
+  background-color: #cad7fd57;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.tituloPrincipal {
+  font-size: 2rem;
+  color: #1e293b;
+  text-align: center;
+}
+
+.filtros {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.selectFiltro {
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: white;
+  flex: 1;
+  min-width: 150px;
+}
+
+.tablaWrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.tabla th, .tabla td {
+  padding: 12px 16px;
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.tabla th {
+  background-color: #001f3f;
+  color: #e2e2e2;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.tabla tr:nth-child(even) {
+  background-color: #f1f5f9;
+}
+
+.tabla tr:hover {
+  background-color: #e0e7ff;
+}
+
+.aprobado {
+  color: #059669;
+  font-weight: 600;
+}
+
+.rechazado {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.botonVer {
+  background-color: #036b37;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.botonVer:hover {
+  background-color: #059669;
+}
+
+@media (max-width: 900px) {
+  .filtros {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tabla {
+    font-size: 12px;
+  }
+
+  .tabla th, .tabla td {
+    padding: 8px 10px;
+  }
+
+  .botonVer {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}

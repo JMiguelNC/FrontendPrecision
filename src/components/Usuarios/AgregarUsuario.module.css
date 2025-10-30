@@ -1,0 +1,185 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.699);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #e4f0fa;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 95vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.modal h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.modalFormulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inputGroupRow {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.inputGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.inputGroup input,
+.inputGroup select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.inputGroup input[type="file"] {
+  padding: 5px;
+}
+
+.inputPassword {
+  display: flex;
+  align-items: center;
+}
+
+.inputPassword input {
+  flex: 1;
+}
+
+.togglePassword {
+  margin-left: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.modalBotones {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.botonAgregar {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.botonAgregar:hover {
+  background-color: #0056b3;
+}
+
+.botonCancelar {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.botonCancelar:hover {
+  background-color: #a71d2a;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .modal {
+    padding: 15px;
+  }
+
+  .inputGroupRow {
+    flex-direction: column;
+  }
+
+  .modal h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    width: 95%;
+    border-radius: 8px;
+  }
+
+  .botonAgregar,
+  .botonCancelar {
+    flex: 1;
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  .modalBotones {
+    flex-direction: column;
+  }
+}
+
+.previewFoto {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.previewFoto img {
+  max-width: 120px;
+  max-height: 120px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  object-fit: cover;
+}
+
+.error {
+  color: #d9534f;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.mensajeExito {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 600;
+  border: 1px solid #c3e6cb;
+}

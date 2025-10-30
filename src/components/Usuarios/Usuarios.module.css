@@ -1,0 +1,159 @@
+.tablaContainer {
+  padding: 1rem;
+  background-color: #f0f4ff91;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.headerTabla {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.headerTabla h2 {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.botonAgregar {
+  padding: 8px 16px;
+  background-color: #310583;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  flex-shrink: 0;
+}
+
+.botonAgregar:hover {
+  background-color: #664080;
+}
+
+.tablaResponsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.tabla th, .tabla td {
+  padding: 12px 16px;
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.tabla th {
+  background-color: #001f3f;
+  color: #e2e2e2;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.tabla tr:nth-child(even) {
+  background-color: #f1f5f9;
+}
+
+.tabla tr:hover {
+  background-color: #e0e7ff;
+}
+
+.boton {
+  padding: 5px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.botonEditar {
+  background-color: #036b37;
+  color: white;
+}
+
+.botonEditar:hover {
+  background-color: #059669;
+}
+
+.botonVer {
+  background-color: #2e3a59;
+  color: white;
+  margin-left: 5px;
+}
+
+.botonVer:hover {
+  background-color: #405080;
+}
+
+.acciones {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .tabla th, .tabla td {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .boton {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+}
+
+/* Móviles: tabla se convierte en cards */
+@media (max-width: 600px) {
+  .tabla, .tabla thead, .tabla tbody, .tabla th, .tabla td, .tabla tr {
+    display: block;
+    width: 100%;
+  }
+
+  .tabla thead {
+    display: none;
+  }
+
+  .tabla tr {
+    margin-bottom: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 12px;
+  }
+
+  .tabla td {
+    text-align: left;
+    padding: 8px 10px;
+    border: none;
+    position: relative;
+  }
+
+  .tabla td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+    color: #374151;
+  }
+
+  .acciones {
+    justify-content: flex-start;
+  }
+}

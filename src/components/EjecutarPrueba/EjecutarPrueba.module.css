@@ -1,0 +1,161 @@
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.introCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e7f4ffb0;
+  padding: 100px 150px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+.iconoIntro {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.titulo {
+  font-size: 2.5rem;
+  color: #1b2430;
+  margin-bottom: 30px;
+}
+
+.botonPrincipal {
+  padding: 12px 28px;
+  background-color: #2e3a59;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.botonPrincipal:hover {
+  background-color: #405080;
+}
+
+.modalOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal {
+  background-color: #162e6b9a;
+  padding: 30px 50px;
+  border-radius: 15px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.ipText {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #2e3a59;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.videoContainer {
+  position: relative;
+  width: 1200px;
+  height: 650px;
+  max-width: 100vw;
+  max-height: 100vh;
+  background-color: #000;
+  border: 2px solid #2e3a59;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.fullscreen {
+  width: 100vw !important;
+  height: 100vh !important;
+  border-radius: 0 !important;
+}
+
+.videoStream {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  pointer-events: all;
+  will-change: transform;
+  transform-origin: top left;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.1s;
+}
+
+.canvasOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+}
+
+.loaderOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+@media (max-width: 1200px) {
+  .videoContainer { width: 85vw; height: 70vh; }
+}
+
+@media (max-width: 768px) {
+  .videoContainer { width: 95vw; height: 50vh; }
+}

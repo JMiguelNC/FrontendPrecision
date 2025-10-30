@@ -1,0 +1,368 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal {
+  background: white;
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.formulario {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: auto;
+  background: black;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.hojaCarta {
+  position: relative;
+  background: #fff;
+  width: 21.59cm;
+  height: 27.94cm;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  padding-top: 1.27cm;
+  padding-right: 1.27cm;
+  padding-bottom: 1.27cm;
+  padding-left: 2.5cm;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+}
+
+.tablaEncabezado {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  table-layout: fixed;
+}
+
+.tablaEncabezado th {
+  border: 1.5px solid black;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0;
+}
+
+.tablaEncabezado th:nth-child(1) { width: 1.98cm; }
+.tablaEncabezado th:nth-child(2) { width: 12.09cm; }
+
+.subCelda {
+  width: 3.72cm;
+  height: 0.25cm;
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'Calibri', sans-serif;
+  font-size: 12px;
+}
+
+.imagenCelda { width: 47%; height: auto; object-fit: contain; }
+
+.textoSegundaColumna {
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.inputGroup label {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.input {
+  width: 2.97cm;
+  padding: 2px 4px;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  line-height: 1.2;
+  vertical-align: middle;
+  box-sizing: border-box;
+  border: 1px solid #000;
+}
+
+.inputFechaInspeccion {
+  font-size: 12px;
+  width: 150px;
+  flex: none;
+  max-width: none;
+  display: inline-block;
+}
+
+.labelNegrita { font-weight: bold; text-decoration: underline; font-size: 12px; }
+.labelNormal { font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; text-decoration: none; }
+
+.select {
+  padding: 2px 2px;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+}
+
+.inputPequeno {
+  width: 1.01cm !important;
+  padding: 2px 4px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  line-height: 1.2;
+  vertical-align: middle;
+  box-sizing: border-box;
+  border: 1px solid #000;
+}
+
+.pliegoContainer {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pliego {
+  width: 18.22cm;
+  height: 17.76cm;
+  object-fit: contain;
+}
+
+.tablaInferiorContainer {
+  margin-top: 18.4cm;
+  display: flex;
+  justify-content: center;
+}
+
+.tablaInferior {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.tablaInferior td {
+  border: 1.5px solid black;
+  height: 0.56cm;
+}
+
+.tablaInferior td:first-child { width: 11cm; }
+.tablaInferior td:last-child { width: 6cm; }
+
+.negrita {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+}
+
+.inputTabla {
+  width: 4cm;
+  padding: 2px 4px;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  margin-left: 4px;
+  line-height: 1.2;
+  vertical-align: middle;
+  box-sizing: border-box;
+  border: 1px solid #000;
+}
+
+.inputTablaFila {
+  width: 82%;
+  padding: 2px 4px;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  margin-right: 4px;
+  line-height: 1.2;
+  vertical-align: middle;
+  box-sizing: border-box;
+  border: 1px solid #000;
+}
+
+.botonAgregar {
+  background-color: #1c0080;
+  color: #fff;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+
+.botonesFoto {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px; 
+  margin-bottom: 10px; 
+}
+
+.seccionFoto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.foto {
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #aaa;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.imagenSubida {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.controlesImagen {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.botonFoto {
+  background-color: #170080;
+  color: white;
+  padding: 5px 12px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.botonFoto:hover { background-color: #1c77cc; }
+
+.botonQuitar {
+  background-color: #800000;
+  color: white;
+  padding: 5px 12px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.botonQuitar:hover { background-color: #c00000; }
+
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.botonCerrar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  background-color: #d32f2f;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  transition: all 0.25s ease;
+}
+
+.botonCerrar:hover {
+  background-color: #b71c1c;
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+}
+
+.botonCerrar::before {
+  content: "✖";
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* --- Mensajes debajo del botón --- */
+.mensajeError {
+  color: #d32f2f; /* rojo intenso */
+  background-color: #ffebee; /* fondo rosado claro */
+  border: 1px solid #d32f2f;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-top: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  animation: fadeInOut 3s forwards;
+}
+
+.mensajeExito {
+  color: #388e3c; /* verde intenso */
+  background-color: #e8f5e9; /* fondo verde claro */
+  border: 1px solid #388e3c;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-top: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  animation: fadeInOut 3s forwards;
+}
+
+/* Animación para que aparezca y desaparezca suavemente */
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-5px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-5px); }
+}

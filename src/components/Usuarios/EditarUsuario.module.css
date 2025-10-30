@@ -1,0 +1,137 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #f5f7fa;
+  padding: 25px 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.modal h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.mensajeExito {
+  text-align: center;
+  color: #155724;
+  background-color: #d4edda;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.camposGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.camposGrid div {
+  display: flex;
+  flex-direction: column;
+}
+
+.camposGrid label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.camposGrid input[type="text"],
+.camposGrid input[type="email"],
+.camposGrid input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.previewFoto {
+  margin-top: 10px;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.guardar {
+  background-color: #008d3b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.guardar:hover {
+  background-color: #01d352;
+}
+
+.cancelar {
+  background-color: #0019a8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.cancelar:hover {
+  background-color: #006fd6;
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 20px;
+  }
+
+  .botones {
+    flex-direction: column;
+  }
+}
+
+.eliminar {
+  background-color: #a30000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.eliminar:hover {
+  background-color: #e60000;
+}
