@@ -20,7 +20,7 @@ export default function Login() {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/usuarios/login", {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/usuarios/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ usuario: username, contrasena: password })
